@@ -1,9 +1,11 @@
 import { Box, NativeBaseProvider, Text } from 'native-base'
 import { StatusBar } from 'react-native'
 
+import { THEME } from 'src/theme'
+
 export default function App() {
 	return (
-		<NativeBaseProvider>
+		<NativeBaseProvider theme={THEME}>
 			<StatusBar
 				barStyle="light-content"
 				backgroundColor="transparent"
