@@ -1,11 +1,13 @@
-import { HStack, Text, VStack } from 'native-base'
-import { ForkKnife } from 'phosphor-react-native'
+import { HStack, Icon, Text, VStack, useTheme } from 'native-base'
+import { ForkKnife, Plus } from 'phosphor-react-native'
 import { useState } from 'react'
 
+import { Button } from '@components/Button'
 import { StatisticBox } from '@components/StatisticBox'
 import { UserImage } from '@components/UserImage'
 
 export function Home() {
+	const { colors } = useTheme()
 	const [userPhoto, setUserPhoto] = useState('https://github.com/mgckaled.png')
 
 	return (
@@ -20,7 +22,22 @@ export function Home() {
 				</HStack>
 				<UserImage source={{ uri: userPhoto }} alt="Imagem do usuário" />
 			</HStack>
-			<StatisticBox mt={8} mx={8} percent="88,99" />
+			<VStack flex={1} mt={8} mx={8}>
+				<StatisticBox mb={6} percent="88,99" />
+				<Text mb={1} fontFamily="body" fontSize="md">
+					Refeições
+				</Text>
+				<Button
+					title="Nova Refeição"
+					leftIcon={
+						<Icon
+							as={Plus}
+							size={30}
+							style={{ backgroundColor: colors.gray[300] }}
+						/>
+					}
+				/>
+			</VStack>
 		</VStack>
 	)
 }
