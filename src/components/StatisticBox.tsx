@@ -1,4 +1,11 @@
-import { Heading, IPressableProps, Pressable, Text, VStack } from 'native-base'
+import {
+	HStack,
+	Heading,
+	IPressableProps,
+	Pressable,
+	Text,
+	VStack
+} from 'native-base'
 import { ArrowUpRight } from 'phosphor-react-native'
 
 type Props = IPressableProps & {
@@ -20,7 +27,9 @@ export function StatisticBox({ percent, ...rest }: Props) {
 			bg="green.100"
 			{...rest}
 		>
-			<ArrowUpRight size={30} />
+			<HStack ml={310}>
+				<ArrowUpRight size={30} color="#B9BBBC" />
+			</HStack>
 
 			<VStack alignItems="center">
 				<Heading fontSize="2xl" color="gray.600" fontFamily="heading">
