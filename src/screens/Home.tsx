@@ -3,6 +3,7 @@ import { ForkKnife, Plus } from 'phosphor-react-native'
 import { useState } from 'react'
 
 import { Button } from '@components/Button'
+import { MealCard } from '@components/MealCard'
 import { StatisticBox } from '@components/StatisticBox'
 import { UserImage } from '@components/UserImage'
 
@@ -37,6 +38,7 @@ export function Home() {
 						/>
 					}
 				/>
+				<MealCard hour={'12:00'} title={'X-Tudo'} color={colors.green[400]} />
 			</VStack>
 		</VStack>
 	)
