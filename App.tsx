@@ -16,11 +16,11 @@ export default function App() {
 	return (
 		<NativeBaseProvider theme={THEME}>
 			<StatusBar
-				barStyle="light-content"
+				barStyle="dark-content"
 				backgroundColor="transparent"
 				translucent
 			/>
-			{fontsLoaded ? <Loading /> : <Home />}
+			{fontsLoaded ? <Home /> : <Loading />}
 		</NativeBaseProvider>
 	)
 }
