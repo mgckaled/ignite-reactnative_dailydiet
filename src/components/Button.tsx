@@ -2,24 +2,35 @@ import { Button as ButtonNativeBase, IButtonProps, Text } from 'native-base'
 
 type Props = IButtonProps & {
 	title: string
+	variant?: 'solid' | 'outline'
+	widthSize?: 'full' | '85%'
 }
 
-export function Button({ title, ...rest }: Props) {
+export function Button({
+	title,
+	variant = 'solid',
+	widthSize = 'full',
+	...rest
+}: Props) {
 	return (
 		<ButtonNativeBase
-			w="full"
+			w={widthSize}
 			h={12}
-			bg="gray.600"
+			bg={variant === 'outline' ? 'gray.100' : 'gray.600'}
 			borderWidth={1}
 			borderColor="gray.700"
 			rounded="md"
 			justifyItems="center"
 			_pressed={{
-				bg: 'gray.500'
+				bg: variant === 'outline' ? 'white' : 'gray.500'
 			}}
 			{...rest}
 		>
-			<Text color="white" fontFamily="heading" fontSize="sm">
+			<Text
+				color={variant === 'outline' ? 'gray.700' : 'white'}
+				fontFamily="heading"
+				fontSize="sm"
+			>
 				{title}
 			</Text>
 		</ButtonNativeBase>
