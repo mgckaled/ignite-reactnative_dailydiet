@@ -11,6 +11,8 @@ export function MealCard({ hour, title, color }: Props) {
 		<Pressable
 			flexDirection="row"
 			w="full"
+			mt={2}
+			mb={1}
 			py={3}
 			px={4}
 			bg="gray.100"
@@ -22,14 +24,14 @@ export function MealCard({ hour, title, color }: Props) {
 			justifyContent="space-between"
 			onPress={() => console.log("I'm Pressed")}
 		>
-			<HStack alignItems="center" justifyItems="center">
+			<HStack flex={1} alignItems="center">
 				<Text color="gray.500" fontSize="sm" fontFamily="heading">
 					{hour}
 				</Text>
 				<Text ml={2} color="gray.400" fontSize="md">
 					|
 				</Text>
-				<Text ml={2} color="gray.400" fontSize="md" numberOfLines={1}>
+				<Text flex={1} ml={2} color="gray.400" fontSize="md" numberOfLines={1}>
 					{title}
 				</Text>
 			</HStack>

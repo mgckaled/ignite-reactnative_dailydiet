@@ -9,10 +9,11 @@ import {
 import { ArrowUpRight } from 'phosphor-react-native'
 
 type Props = IPressableProps & {
-	percent: string
+	percentMeal: number
+	colorIcon: string
 }
 
-export function StatisticBox({ percent, ...rest }: Props) {
+export function StatisticBox({ percentMeal, ...rest }: Props) {
 	return (
 		<Pressable
 			flex={1}
@@ -31,9 +32,9 @@ export function StatisticBox({ percent, ...rest }: Props) {
 				<ArrowUpRight size={30} color="#B9BBBC" />
 			</HStack>
 
-			<VStack alignItems="center">
+			<VStack justifyContent="center" alignItems="center">
 				<Heading fontSize="2xl" color="gray.600" fontFamily="heading">
-					{percent}%
+					{percentMeal}%
 				</Heading>
 				<Text fontSize="sm" fontFamily="body" color="gray.600">
 					das refeições dentro da dieta
