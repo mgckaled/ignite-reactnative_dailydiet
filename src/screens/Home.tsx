@@ -1,3 +1,4 @@
+import { useNavigation } from '@react-navigation/native'
 import {
 	HStack,
 	Heading,
@@ -30,6 +31,12 @@ export function Home() {
 		}
 	])
 
+	const navigation = useNavigation()
+
+	function handleStatistics() {
+		navigation.navigate('statistics')
+	}
+
 	return (
 		<VStack flex={1} bg="gray.100" safeArea>
 			<HStack mt={8} mx={8} alignItems="center" justifyContent="space-between">
@@ -43,7 +50,13 @@ export function Home() {
 				<UserImage source={{ uri: userPhoto }} alt="Imagem do usuário" />
 			</HStack>
 			<VStack flex={1} mt={8} mx={8}>
-				<StatisticBox flex={1} mb={6} percentMeal={88.99} colorIcon={''} />
+				<StatisticBox
+					flex={1}
+					mb={6}
+					percentMeal={88.99}
+					colorIcon={''}
+					onPress={handleStatistics}
+				/>
 				<Text mb={1} fontFamily="body" fontSize="md">
 					Refeições
 				</Text>
