@@ -1,7 +1,8 @@
-import { BoxData } from '@components/BoxData'
 import { useNavigation } from '@react-navigation/native'
 import { Box, HStack, Pressable, Stack, Text, VStack } from 'native-base'
 import { ArrowLeft } from 'phosphor-react-native'
+
+import { BoxData } from '@components/BoxData'
 
 export function Statistics() {
 	const navigation = useNavigation()
