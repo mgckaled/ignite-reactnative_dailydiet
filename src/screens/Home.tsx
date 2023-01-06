@@ -37,6 +37,10 @@ export function Home() {
 		navigation.navigate('statistics')
 	}
 
+	function handleCreateMeal() {
+		navigation.navigate('create')
+	}
+
 	return (
 		<VStack flex={1} bg="gray.100" safeArea>
 			<HStack mt={8} mx={8} alignItems="center" justifyContent="space-between">
@@ -69,6 +73,7 @@ export function Home() {
 							style={{ backgroundColor: colors.gray[300] }}
 						/>
 					}
+					onPress={handleCreateMeal}
 				/>
 				<SectionList
 					flex={1}
