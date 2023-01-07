@@ -38,8 +38,8 @@ export function CreateMeal() {
 	})
 
 	return (
-		<VStack flex={1}>
-			<VStack flex={1}>
+		<VStack flex={1} safeAreaTop>
+			<VStack>
 				<ScreenHeader
 					onPress={handleGoBack}
 					headerBgColor="gray.300"
@@ -48,6 +48,7 @@ export function CreateMeal() {
 			</VStack>
 			<ScrollView
 				mx={7}
+				mt={8}
 				mb={10}
 				contentContainerStyle={{ flexGrow: 1 }}
 				showsVerticalScrollIndicator={false}

@@ -11,8 +11,8 @@ export function ScreenHeader({ title, headerBgColor, ...rest }: Props) {
 	return (
 		<HStack
 			bg={headerBgColor}
-			pt={8}
-			pb={7}
+			pt={3}
+			pb={8}
 			px={8}
 			alignItems="center"
 			safeAreaTop
